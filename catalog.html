@@ -13,7 +13,7 @@
       <nav class="navigation">
         <div class="header-logo">
           <a href="index.html" class="header-logo-link">
-            <img src="#" alt="Логотип Седоны">
+            <img src="images/header/logo.svg" alt="Логотип Седоны">
           </a>
         </div>
         <ul class="navigation-list navigation-menu">
@@ -103,8 +103,10 @@
           <input type="number" name="from" placeholder="от">
           <input type="number" name="to" placeholder="до">
         </fieldset>
-        <button class="button button-filter button-blue" type="submit">Применить</button>
-        <input type="reset" value="Сбросить">
+        <fieldset class="catalog-filter-group">
+          <button class="button button-filter button-blue" type="submit">Применить</button>
+          <input type="reset" value="Сбросить">
+        </fieldset>
       </form>
     </section>
 
@@ -119,101 +121,97 @@
         </select>
       </div>
       <div class="catalog-content-view">
-        <a class="button-cards" href="#">
+        <a class="button-content-view button-cards" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
-        <a class="button-list" href="#">
+        <a class="button-content-view button-list" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
-        <a class="button-full-size" href="#">
+        <a class="button-content-view button-full-size" href="#">
           <span class="visually-hidden">Показать одну карточку</span>
         </a>
       </div>
       <div class="catalog-cards">
         <ul class="catalog-list">
           <li class="catalog-item">
-            <div class="catalog-item-wrapper">
-              <img src="#" class="catalog-item-img" alt="Гостиница 'Amara Resort & Spa'">
-              <div class="catalog-item-text">
-                <p class="catalog-item-type">Гостиница</p>
-                <p class="catalog-item-price">От 4000 ₽</p>
+            <a href="#"><img src="images/catalog/hotels/hotel-1.jpg" class="catalog-item-img" width="300" height="212"
+                alt="Гостиница 'Amara Resort & Spa'"></a>
+            <div class="catalog-item-text">
+              <p class="catalog-item-type">Гостиница</p>
+              <p class="catalog-item-price">От 4000 ₽</p>
+            </div>
+            <div class="catalog-item-buttons">
+              <a class="button button-brown" href="#">Подробнее</a>
+              <button class="button button-blue">В избранное</button>
+            </div>
+            <div class="catalog-item-rating">
+              <div class="rating-stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="catalog-item-buttons">
-                <a class="button button-brown" href="#">Подробнее</a>
-                <button class="button button-blue">В избранное</button>
-              </div>
-              <div class="catalog-item-rating">
-                <div class="rating-stars">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <p class="rating-text">Рейтинг: 8,5</p>
-              </div>
+              <p class="rating-text">Рейтинг: 8,5</p>
             </div>
           </li>
           <li>
-            <div class="catalog-item-wrapper">
-              <img src="#" class="catalog-item-img" alt="Гостиница 'Villas at Poco Diablo'">
-              <div class="catalog-item-text">
-                <p class="catalog-item-type">Гостиница</p>
-                <p class="catalog-item-price">От 5000 ₽</p>
+            <a href="#"><img src="images/catalog/hotels/hotel-2.jpg" class="catalog-item-img" width="300" height="212"
+                alt="Гостиница 'Villas at Poco Diablo'"></a>
+            <div class="catalog-item-text">
+              <p class="catalog-item-type">Гостиница</p>
+              <p class="catalog-item-price">От 5000 ₽</p>
+            </div>
+            <div class="catalog-item-buttons">
+              <a class="button button-brown" href="#">Подробнее</a>
+              <button class="button button-blue button-active">В избранном</button>
+            </div>
+            <div class="catalog-item-rating">
+              <div class="rating-stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="catalog-item-buttons">
-                <a class="button button-brown" href="#">Подробнее</a>
-                <button class="button button-blue button-active">В избранном</button>
-              </div>
-              <div class="catalog-item-rating">
-                <div class="rating-stars">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <p class="rating-text">Рейтинг: 9,2</p>
-              </div>
+              <p class="rating-text">Рейтинг: 9,2</p>
             </div>
           </li>
           <li>
-            <div class="catalog-item-wrapper">
-              <img src="#" class="catalog-item-img" alt="Гостиница 'Desert Quail Inn'">
-              <div class="catalog-item-text">
-                <p class="catalog-item-type">Гостиница</p>
-                <p class="catalog-item-price">От 2500 ₽</p>
+            <a href="#"><img src="images/catalog/hotels/hotel-3.jpg" class="catalog-item-img" width="300" height="212"
+                alt="Гостиница 'Desert Quail Inn'"></a>
+            <div class="catalog-item-text">
+              <p class="catalog-item-type">Гостиница</p>
+              <p class="catalog-item-price">От 2500 ₽</p>
+            </div>
+            <div class="catalog-item-buttons">
+              <a class="button button-brown" href="#">Подробнее</a>
+              <button class="button button-blue">В избранное</button>
+            </div>
+            <div class="catalog-item-rating">
+              <div class="rating-stars">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="catalog-item-buttons">
-                <a class="button button-brown" href="#">Подробнее</a>
-                <button class="button button-blue">В избранное</button>
-              </div>
-              <div class="catalog-item-rating">
-                <div class="rating-stars">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <p class="rating-text">Рейтинг: 6,9</p>
-              </div>
+              <p class="rating-text">Рейтинг: 6,9</p>
             </div>
           </li>
           <li>
-            <div class="catalog-item-wrapper">
-              <img src="#" class="catalog-item-img" alt="Гостиница 'GreenTree Inn'">
-              <div class="catalog-item-text">
-                <p class="catalog-item-type">Гостиница</p>
-                <p class="catalog-item-price">От 1500 ₽</p>
+            <a href="#"><img src="images/catalog/hotels/hotel-4.jpg" class="catalog-item-img" width="300" height="212"
+                alt="Гостиница 'GreenTree Inn'"></a>
+            <div class="catalog-item-text">
+              <p class="catalog-item-type">Гостиница</p>
+              <p class="catalog-item-price">От 1500 ₽</p>
+            </div>
+            <div class="catalog-item-buttons">
+              <a class="button button-brown" href="#">Подробнее</a>
+              <button class="button button-blue">В избранное</button>
+            </div>
+            <div class="catalog-item-rating">
+              <div class="rating-stars">
+                <span></span>
+                <span></span>
               </div>
-              <div class="catalog-item-buttons">
-                <a class="button button-brown" href="#">Подробнее</a>
-                <button class="button button-blue">В избранное</button>
-              </div>
-              <div class="catalog-item-rating">
-                <div class="rating-stars">
-                  <span></span>
-                  <span></span>
-                </div>
-                <p class="rating-text">Рейтинг: 5,0</p>
-              </div>
+              <p class="rating-text">Рейтинг: 5,0</p>
             </div>
           </li>
         </ul>
@@ -232,7 +230,7 @@
           <a class="pagination-link" href="#">4</a>
         </li>
         <li class="pagination-item">
-          <span class="pagination-dots">...</span>
+          <a class="pagination-link">...</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">10</a>
@@ -243,15 +241,11 @@
     <section class="subscribe">
       <div class="container">
         <h2 class="visually-hidden">Подписка на интересные новости Седоны</h2>
-        <div class="descr-wrapper">
-          <p class="descr-text-heading">Подпишитесь на рассылку</p>
-          <p class="descr-text-subheading">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        </div>
+        <p class="description-text-heading">Подпишитесь на рассылку</p>
+        <p class="description-text-subheading">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="subscribe-form-date">
-            <input type="email" name="subscribe-email" placeholder="Ваш e-mail">
-            <button class="button button-subscribe" type="submit">Подписаться</button>
-          </div>
+          <input type="email" name="subscribe-email" placeholder="Ваш e-mail">
+          <button class="button button-subscribe" type="submit">Подписаться</button>
         </form>
       </div>
     </section>
@@ -275,7 +269,7 @@
           </address>
           <div class="footer-author">
             <a class="footer-author-link" href="https://htmlacademy.ru/">
-              <img src="#" alt="Логотип .html academy">
+              <img src="images/footer/html-academy.svg" width="115" height="33" alt="Разработчик .html academy">
             </a>
           </div>
         </div>
