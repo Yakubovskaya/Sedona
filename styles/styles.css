@@ -66,7 +66,7 @@ body {
 }
 
 .hero {
-  /* background-image: url("../images/hero-background.jpg"); */
+  background-image: url("../images/hero-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #accade;
@@ -118,6 +118,8 @@ body {
 
 .subscribe {
   background-image: url("../images/subscribe-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   background-color: #accade;
   color: #ffffff;
 }
@@ -144,9 +146,14 @@ body {
 }
 
 .filter-wrapper {
+  /* Тут надо добавить
+  background-image: url(); уточнить у наставника
+  background-size: 100% auto;
+  background-repeat: no-repeat; */
   background-color: #678eb5;
   color: #ffffff;
 }
+
 .inner-header-title {
   font-size: 60px;
   font-weight: 700;
