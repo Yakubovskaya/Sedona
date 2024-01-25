@@ -415,7 +415,6 @@ body {
 
 .filter-section {
   padding: 36px 0 69px;
-  margin-bottom: 50px;
   background-image: url('../images/catalog/filter-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -526,6 +525,10 @@ body {
   min-width: 191px;
   line-height: 20px;
   background-color: transparent;
+}
+
+.catalog-content {
+  padding: 50px 0 60px;
 }
 
 .catalog-content-header {
@@ -657,13 +660,13 @@ body {
 }
 
 .pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .pagination-link {
