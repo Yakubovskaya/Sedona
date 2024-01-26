@@ -600,6 +600,11 @@ body {
   border-radius: 4px;
 }
 
+.catalog-item-title-link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .catalog-item-title {
   font-size: 24px;
   font-weight: 700;
