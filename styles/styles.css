@@ -246,8 +246,13 @@ body {
   color: #333333;
 }
 
-.advantages-item-img {
+.advantages-item-img-wrapper {
   display: flex;
+}
+
+.advantages-item-img-wrapper img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* services section*/
@@ -594,45 +599,52 @@ body {
 }
 
 .catalog-item {
-  min-height: 438px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px min-content auto min-content min-content;
+  gap: 16px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
+.catalog-item-img-link {
+  grid-column: 1 / -1;
+}
+
+.catalog-item-img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .catalog-item-title-link {
+  grid-column: 1 / -1;
   text-decoration: none;
   color: #000000;
 }
 
 .catalog-item-title {
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  margin: 16px 0;
 }
 
-.catalog-item-text {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+.catalog-item p {
+  margin: 0;
   line-height: 21px;
 }
 
-.catalog-item-text p {
-  margin: 0;
-  margin-bottom: 16px;
+.catalog-item-type {
+  grid-column: 1 / 2;
 }
 
-.catalog-item-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+.catalog-item-price {
+  grid-column: 2 / 3;
+  justify-self: end;
 }
 
-.catalog-item-buttons > .button {
-  width: 140px;
+.button-more, .button-favourite {
   font-size: 16px;
   line-height: 20px;
 }
@@ -642,13 +654,11 @@ body {
 }
 
 .button-favourite {
-  padding: 8px 18px;
+  padding: 8px 20px;
 }
 
-.catalog-item-rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.button-favourite.button-green {
+  padding: 8px 18px;
 }
 
 .rating-text {
