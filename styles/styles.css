@@ -94,6 +94,7 @@ body {
 
 .header-logo {
   margin-right: 30px;
+  height: 64px;
 }
 
 .navigation-list {
@@ -176,7 +177,9 @@ body {
   color: #333333;
 }
 
-.advantages .section-text {
+/*advantages section*/
+
+.advantages .section-text-wrapper {
   padding: 69px 0 90px;
 }
 
@@ -188,63 +191,73 @@ body {
   width: 651px;
 }
 
-.advantages-wrapper {
+.advantages-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.section-item {
+.advantages-item {
+  display: flex;
+  background-color: #82b3d3;
+}
+
+.advantages-item-wrapper {
   width: 400px;
   min-height: 385px;
+  padding: 102px 85px;
 }
 
-.section-item-heading {
+.advantages-item-heading {
+  margin: 0 0 62px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
-.section-item-description {
+.advantages-item-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #333333;
-}
-
-.advantages-item {
-  padding: 100px 85px;
-  background-color: rgba(131, 179, 211, 0.20);
-  color: #000000;
-}
-
-.advantages-item-dark-blue .section-item-description{
-  background-color: #83b3d3;
   color: #ffffff;
 }
 
-.advantages-item-dark-blue {
-  background-color: #83b3d3;
-  color: #ffffff;
-}
-
-.advantages-item-light-blue {
+.advantages-item-light {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-item-img {
+.advantages-item-dark {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-light h3,
+.advantages-item-dark h3 {
+  color: #000000;
+}
+
+.advantages-item-light p,
+.advantages-item-dark p {
+  color: #333333;
+}
+
+.advantages-item-img-wrapper {
   display: flex;
 }
 
-.services ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.advantages-item-img-wrapper img {
+  width: 100%;
+  object-fit: cover;
 }
 
-.services .section-text {
+/* services section*/
+
+.services .section-text-wrapper {
   padding: 64px 0;
 }
 
@@ -257,24 +270,53 @@ body {
   width: 490px;
 }
 
-.services-wrapper {
+.services-list {
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
-.services .section-item {
+.services-item {
+  width: 400px;
+  min-height: 385px;
   padding: 80px 85px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.services-item-heading {
+  margin: 30px 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services-item-description {
+  margin: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
 }
 
 .services-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+/*search section*/
+
 .search {
   padding: 96px 0;
 }
 
-.search .section-text {
+.search .section-text-wrapper {
   margin-bottom: 54px;
 }
 
@@ -297,6 +339,8 @@ body {
   line-height: 36px;
 }
 
+/*subscribe section*/
+
 .subscribe {
   padding: 96px 0 104px;
   background-image: url("../images/subscribe-background.jpg");
@@ -306,7 +350,7 @@ body {
   color: #ffffff;
 }
 
-.subscribe .section-text {
+.subscribe .section-text-wrapper {
   margin-bottom: 54px;
   color:#ffffff
 }
@@ -337,6 +381,8 @@ body {
   line-height: 36px;
   border-radius: 0px 4px 4px 0px;
 }
+
+/*footer*/
 
 .main-footer {
   padding-top: 45px;
@@ -374,11 +420,10 @@ body {
   margin-left: auto;
 }
 
-/* Стилиация страницы каталога*/
+/*Catalog*/
 
 .filter-section {
   padding: 36px 0 69px;
-  margin-bottom: 50px;
   background-image: url('../images/catalog/filter-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -491,6 +536,10 @@ body {
   background-color: transparent;
 }
 
+.catalog-content {
+  padding: 50px 0 60px;
+}
+
 .catalog-content-header {
   display: flex;
   align-items: center;
@@ -541,56 +590,61 @@ body {
 }
 
 .catalog-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0;
+  margin: 0 0 80px;
   padding: 0;
-  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   list-style-type: none;
 }
 
 .catalog-item {
-  width: 340px;
-  min-height: 438px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px min-content auto min-content min-content;
+  gap: 16px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
-.catalog-item:not(:last-child) {
-  margin-bottom: 20px;
+.catalog-item-img-link {
+  grid-column: 1 / -1;
+}
+
+.catalog-item-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.catalog-item-title-link {
+  grid-column: 1 / -1;
+  text-decoration: none;
+  color: #000000;
 }
 
 .catalog-item-title {
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  margin: 16px 0;
 }
 
-.catalog-item-text {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+.catalog-item p {
+  margin: 0;
   line-height: 21px;
 }
 
-.catalog-item-text p {
-  margin: 0;
-  margin-bottom: 16px;
+.catalog-item-type {
+  grid-column: 1 / 2;
 }
 
-.catalog-item-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+.catalog-item-price {
+  grid-column: 2 / 3;
+  justify-self: end;
 }
 
-.catalog-item-buttons > .button {
-  width: 140px;
+.button-more, .button-favourite {
   font-size: 16px;
   line-height: 20px;
 }
@@ -600,13 +654,11 @@ body {
 }
 
 .button-favourite {
-  padding: 8px 18px;
+  padding: 8px 20px;
 }
 
-.catalog-item-rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.button-favourite.button-green {
+  padding: 8px 18px;
 }
 
 .rating-text {
@@ -620,13 +672,13 @@ body {
 }
 
 .pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .pagination-link {
