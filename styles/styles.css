@@ -94,8 +94,10 @@ body {
 }
 
 .header-logo {
+  position: relative;
   margin-right: 30px;
   height: 64px;
+  z-index: 20;
 }
 
 .navigation-list {
@@ -182,14 +184,19 @@ body {
 .hero {
   position: relative;
   padding: 51px 0 82px;
-  background: url("../images/hero-background.jpg") 100%/cover no-repeat ;
+  background: url('../images/hero-background.jpg') 100%/cover no-repeat;
   background-color: #accade;
 }
 
 .hero::after {
-  content: url('../icons/decorative-line.svg');
+  content: '';
   position: absolute;
-  bottom: -7px;
+  background-image: url('../icons/decorative-line.svg');
+  background-size: cover;
+  bottom: -1px;
+  left: 0;
+  width: 1200px;
+  height: 57px;
 }
 
 .hero-img {
@@ -498,6 +505,9 @@ body {
   margin-left: auto;
 }
 
+.footer-author-link {
+  display: flex;
+}
 
 .footer-author-icon {
   fill: #000000;
