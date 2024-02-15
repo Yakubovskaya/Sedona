@@ -542,11 +542,12 @@ body {
 }
 
 .breadcrumbs-item {
+  position: relative;
   font-size: 16px;
   line-height: 21px;
 }
 
-.breadcrumbs-item:first-child {
+.breadcrumbs-item-first {
   width: 12px;
   height: 12px;
 }
@@ -555,9 +556,31 @@ body {
   margin-right: 29px;
 }
 
+.breadcrumbs-item:not(:first-child):not(:last-child)::after {
+  content: url('../icons/arrow-right.svg');
+  position: absolute;
+  top: 1px;
+  right: -18px;
+}
+
+.breadcrumbs-item-first::after {
+  content: url('../icons/arrow-right.svg');
+  position: absolute;
+  top: -4px;
+  right: -20px;
+}
+
+
+
 .breadcrumbs-link {
   text-decoration: none;
   color: #ffffff;
+}
+
+.breadcrumbs-icon {
+  position: absolute;
+  top: -1px;
+  left: 2px;
 }
 
 .catalog-filter-form {
@@ -676,6 +699,20 @@ body {
   height: 48px;
   padding: 14px 12px;
   text-decoration: none;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.button-cards-view {
+  background: url('../icons/cards-view.svg') 52% 52% no-repeat;
+}
+
+.button-full-size-view {
+  background: url('../icons/full-size-view.svg') 52% 52% no-repeat;
+}
+
+.button-list-view {
+  background: url('../icons/list-view.svg') 52% 52% no-repeat;
 }
 
 .button-content-view:not(:last-child) {
@@ -752,6 +789,28 @@ body {
 
 .button-favourite.button-green {
   padding: 8px 18px;
+}
+
+.rating-stars {
+  align-self: center;
+}
+
+.hotel-stars-icons {
+  height: 18px;
+  background-image: url('../icons/star.svg');
+  background-repeat: space;
+}
+
+.hotel-stars-icons-2 {
+  width: 39px;
+}
+
+.hotel-stars-icons-3 {
+  width: 61px;
+}
+
+.hotel-stars-icons-4 {
+  width: 83px;
 }
 
 .rating-text {
