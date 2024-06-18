@@ -79,13 +79,47 @@ body {
   background-color: #756157;
 }
 
+.button-brown:focus,
+.button-brown:hover {
+  outline: none;
+  background-color: #615048;
+}
+
+.button-brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-blue {
   background-color: #82b3d3;
+}
+
+.button-blue:focus,
+.button-blue:hover {
+  outline: none;
+  background-color: #68a2ca;
+}
+
+.button-blue:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green {
   background-color: #7db54f;
 }
+
+.button-green:focus,
+.button-green:hover{
+  outline: none;
+  background-color: #6c9e42;
+}
+
+.button-green:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 /* Стилизация главной страницы */
 
@@ -122,6 +156,7 @@ body {
 
 .navigation-link {
   display: block;
+  position: relative;
   text-decoration: none;
 }
 
@@ -136,8 +171,14 @@ body {
   min-height: 64px;
 }
 
-.navigation-link {
-  position: relative;
+.navigation-link-current::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #756257;
+  left: 16px;
+  right: 16px;
 }
 
 .navigation-icon {
@@ -246,13 +287,16 @@ body {
 
 .advantages-item {
   display: flex;
-  background-color: #82b3d3;
 }
 
 .advantages-item-wrapper {
   width: 400px;
   min-height: 385px;
   padding: 102px 85px;
+}
+
+.advantages-item-wrapper-blue {
+  background-color: #82b3d3;
 }
 
 .advantages-item-heading {
@@ -483,6 +527,11 @@ body {
   min-height: 40px;
 }
 
+.footer-social-link:focus {
+  outline: none;
+}
+
+
 .footer-social-icon {
   position: absolute;
   top: 0;
@@ -490,7 +539,19 @@ body {
   right: 0;
   left: 0;
   margin: auto;
-  fill: #83B3D3;
+  fill: #83b3d3;
+}
+
+.footer-social-link:focus .footer-social-icon {
+  fill: #68a2ca;
+}
+
+.footer-social-link:active .footer-social-icon {
+  fill:rgba(104, 162, 202, 0.3);
+}
+
+.footer-social-icon:hover {
+  fill: #68a2ca;
 }
 
 .footer-contacts-phone {
@@ -501,6 +562,16 @@ body {
   color: #000000;
 }
 
+.footer-contacts-phone:focus,
+.footer-contacts-phone:hover {
+  outline: none;
+  color: #756157;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-author {
   margin-left: auto;
 }
@@ -509,8 +580,21 @@ body {
   display: flex;
 }
 
+.footer-author-link:focus .footer-author-icon {
+  outline: none;
+  fill: #756157;
+}
+
+.footer-author-link:active .footer-author-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .footer-author-icon {
   fill: #000000;
+}
+
+.footer-author-icon:hover {
+  fill: #756157;
 }
 
 /*Catalog*/
@@ -569,8 +653,6 @@ body {
   top: -4px;
   right: -20px;
 }
-
-
 
 .breadcrumbs-link {
   text-decoration: none;
@@ -641,6 +723,7 @@ body {
 .button-filter {
   min-width: 191px;
   margin-bottom: 32px;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -648,8 +731,22 @@ body {
   padding-right: 58px;
   padding-left: 58px;
   min-width: 191px;
+  font-size: 16px;
   line-height: 20px;
   background-color: transparent;
+}
+
+.button-reset:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .catalog-content {
@@ -677,13 +774,17 @@ body {
 }
 
 .select-control {
-  padding: 14px 20px;
+  padding: 14px 131px 14px 20px;
+  background: url(../icons/arrow-black.svg) no-repeat right;
+  background-position-x: calc(100% - 21px);
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   border-radius: 4px;
+  appearance: none;
   border: 2px solid #e5e5e5;
 }
+
 
 .select-control option {
   line-height: 21px;
