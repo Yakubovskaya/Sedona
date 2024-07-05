@@ -70,7 +70,7 @@ button {
 }
 
 .button {
-  padding: 8px 50px;
+  padding: 8px;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   text-decoration: none;
@@ -80,6 +80,7 @@ button {
   border-radius: 4px;
   color: #ffffff;
   border: none;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -240,7 +241,7 @@ button {
   display: block;
   min-width: 160px;
   margin-left: 20px;
-  padding: 8px 34px;
+  padding: 8px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -274,7 +275,7 @@ button {
 
 .section-text-heading {
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -293,7 +294,7 @@ button {
 /* Advantages section */
 
 .advantages .section-text-wrapper {
-  padding: 69px 0 90px;
+  padding: 72px 0 90px;
 }
 
 .advantages .section-text-heading {
@@ -324,7 +325,7 @@ button {
 
 .advantages-item-wrapper-light,
 .advantages-item-wrapper-dark {
-  padding: 112px 85px;
+  padding: 114px 85px;
 }
 
 .advantages-item-blue {
@@ -345,7 +346,7 @@ button {
 .advantages-item-heading::after {
   content: '';
   position: absolute;
-  top: 85px;
+  bottom: -31px;
   right: 85px;
   width: 60px;
   height: 2px;
@@ -419,22 +420,22 @@ button {
 .services-item {
   width: 400px;
   min-height: 385px;
-  padding: 77px 85px;
+  padding: 155px 85px 77px 85px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.services-item:first-child::before {
-  content: url('../icons/house.svg');
+ .services-item:first-child {
+  background: url('../icons/house.svg') 162px 80px no-repeat;
 }
 
-.services-item:nth-child(2)::before {
-  content: url('../icons/food.svg');
+ .services-item:nth-child(2) {
+  background: url('../icons/food.svg') 162px 81px no-repeat;
 }
 
-.services-item:last-child::before {
-  content: url('../icons/gift.svg');
+.services-item:last-child {
+  background: url('../icons/gift.svg') 167px 79px no-repeat;
 }
 
 
@@ -464,7 +465,7 @@ button {
 /*search section*/
 
 .search {
-  padding: 96px 0;
+  padding: 95px 0;
 }
 
 .search .section-text-wrapper {
