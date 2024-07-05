@@ -162,6 +162,7 @@ button {
 
 .navigation-list {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -221,7 +222,7 @@ button {
 .navigation-link-favourites span:last-child {
   position: absolute;
   top: 12px;
-  right: 2px;
+  right: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,7 +239,7 @@ button {
 .button-header {
   display: block;
   min-width: 160px;
-  margin: 14px 0 14px 20px;
+  margin-left: 20px;
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
@@ -321,7 +322,12 @@ button {
   padding: 102px 85px;
 }
 
-.advantages-item-wrapper-blue {
+.advantages-item-wrapper-light,
+.advantages-item-wrapper-dark {
+  padding: 112px 85px;
+}
+
+.advantages-item-blue {
   background-color: #82b3d3;
 }
 
@@ -413,7 +419,7 @@ button {
 .services-item {
   width: 400px;
   min-height: 385px;
-  padding: 80px 85px;
+  padding: 77px 85px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -447,7 +453,7 @@ button {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 20px;
   color: #333333;
 }
 
@@ -658,6 +664,9 @@ button {
   z-index: 2;
 }
 
+.modal-container {
+  display: none;
+}
 
 .modal {
   position: relative;
@@ -705,9 +714,6 @@ button {
 .modal-close-button:active .modal-close-button-icon path {
   fill: rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 .modal-title {
   margin: 0;
@@ -981,19 +987,19 @@ button {
 }
 
 .breadcrumbs-item-first {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 29px;
+  margin-right: 25px;
 }
 
-.breadcrumbs-item:not(:first-child):not(:last-child)::after {
+.breadcrumbs-item:not(:last-child)::after {
   content: url('../icons/arrow-right.svg');
   position: absolute;
-  top: 1px;
-  right: -18px;
+  top: -3px;
+  right: -15px;
 }
 
 .breadcrumbs-item-first::after {
@@ -1004,6 +1010,9 @@ button {
 }
 
 .breadcrumbs-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: #ffffff;
 }
@@ -1023,8 +1032,8 @@ button {
 
 .breadcrumbs-icon {
   position: absolute;
-  top: -1px;
-  left: 2px;
+  top: 0px;
+  left: 0px;
 }
 
 /*filter*/
@@ -1286,13 +1295,13 @@ input[type='number'] {
 /*catalog content*/
 
 .catalog-content {
-  padding: 50px 0 60px;
+  padding: 47px 0 57px;
 }
 
 .catalog-content-header {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .catalog-content-title {
@@ -1382,7 +1391,7 @@ input[type='number'] {
 /*Список карточек гостиниц*/
 
 .catalog-list {
-  margin: 0 0 80px;
+  margin: 0 0 70px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1392,7 +1401,7 @@ input[type='number'] {
 
 .catalog-item {
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 141px);
   grid-template-rows: 212px min-content auto min-content min-content;
   gap: 16px;
   padding: 20px;
@@ -1464,15 +1473,15 @@ input[type='number'] {
 }
 
 .hotel-stars-icons-2 {
-  width: 39px;
+  width: 41px;
 }
 
 .hotel-stars-icons-3 {
-  width: 61px;
+  width: 64px;
 }
 
 .hotel-stars-icons-4 {
-  width: 83px;
+  width: 88px;
 }
 
 .rating-text {
@@ -1497,12 +1506,15 @@ input[type='number'] {
   flex-wrap: wrap;
 }
 
+.pagination-item {
+  margin: 8px 8px 0 0;
+}
+
 .pagination-link {
   display: inline-block;
   width: 60px;
   height: 60px;
   padding: 11px 0px 13px 0px;
-  margin: 8px;
   border-radius: 4px;
   text-align: center;
   font-size: 20px;
