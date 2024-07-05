@@ -70,7 +70,7 @@ button {
 }
 
 .button {
-  padding: 8px 50px;
+  padding: 8px;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   text-decoration: none;
@@ -80,6 +80,7 @@ button {
   border-radius: 4px;
   color: #ffffff;
   border: none;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -162,6 +163,7 @@ button {
 
 .navigation-list {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -221,7 +223,7 @@ button {
 .navigation-link-favourites span:last-child {
   position: absolute;
   top: 12px;
-  right: 2px;
+  right: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,8 +240,8 @@ button {
 .button-header {
   display: block;
   min-width: 160px;
-  margin: 14px 0 14px 20px;
-  padding: 8px 34px;
+  margin-left: 20px;
+  padding: 8px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -273,7 +275,7 @@ button {
 
 .section-text-heading {
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -292,7 +294,7 @@ button {
 /* Advantages section */
 
 .advantages .section-text-wrapper {
-  padding: 69px 0 90px;
+  padding: 72px 0 90px;
 }
 
 .advantages .section-text-heading {
@@ -321,7 +323,12 @@ button {
   padding: 102px 85px;
 }
 
-.advantages-item-wrapper-blue {
+.advantages-item-wrapper-light,
+.advantages-item-wrapper-dark {
+  padding: 114px 85px;
+}
+
+.advantages-item-blue {
   background-color: #82b3d3;
 }
 
@@ -339,7 +346,7 @@ button {
 .advantages-item-heading::after {
   content: '';
   position: absolute;
-  top: 85px;
+  bottom: -31px;
   right: 85px;
   width: 60px;
   height: 2px;
@@ -413,22 +420,22 @@ button {
 .services-item {
   width: 400px;
   min-height: 385px;
-  padding: 80px 85px;
+  padding: 155px 85px 77px 85px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.services-item:first-child::before {
-  content: url('../icons/house.svg');
+ .services-item:first-child {
+  background: url('../icons/house.svg') 162px 80px no-repeat;
 }
 
-.services-item:nth-child(2)::before {
-  content: url('../icons/food.svg');
+ .services-item:nth-child(2) {
+  background: url('../icons/food.svg') 162px 81px no-repeat;
 }
 
-.services-item:last-child::before {
-  content: url('../icons/gift.svg');
+.services-item:last-child {
+  background: url('../icons/gift.svg') 167px 79px no-repeat;
 }
 
 
@@ -447,7 +454,7 @@ button {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 20px;
   color: #333333;
 }
 
@@ -458,7 +465,7 @@ button {
 /*search section*/
 
 .search {
-  padding: 96px 0;
+  padding: 95px 0;
 }
 
 .search .section-text-wrapper {
@@ -658,6 +665,9 @@ button {
   z-index: 2;
 }
 
+.modal-container {
+  display: none;
+}
 
 .modal {
   position: relative;
@@ -705,9 +715,6 @@ button {
 .modal-close-button:active .modal-close-button-icon path {
   fill: rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 .modal-title {
   margin: 0;
@@ -981,19 +988,19 @@ button {
 }
 
 .breadcrumbs-item-first {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 29px;
+  margin-right: 25px;
 }
 
-.breadcrumbs-item:not(:first-child):not(:last-child)::after {
+.breadcrumbs-item:not(:last-child)::after {
   content: url('../icons/arrow-right.svg');
   position: absolute;
-  top: 1px;
-  right: -18px;
+  top: -3px;
+  right: -15px;
 }
 
 .breadcrumbs-item-first::after {
@@ -1004,6 +1011,9 @@ button {
 }
 
 .breadcrumbs-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: #ffffff;
 }
@@ -1023,8 +1033,8 @@ button {
 
 .breadcrumbs-icon {
   position: absolute;
-  top: -1px;
-  left: 2px;
+  top: 0px;
+  left: 0px;
 }
 
 /*filter*/
@@ -1286,13 +1296,13 @@ input[type='number'] {
 /*catalog content*/
 
 .catalog-content {
-  padding: 50px 0 60px;
+  padding: 47px 0 57px;
 }
 
 .catalog-content-header {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .catalog-content-title {
@@ -1382,7 +1392,7 @@ input[type='number'] {
 /*Список карточек гостиниц*/
 
 .catalog-list {
-  margin: 0 0 80px;
+  margin: 0 0 70px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1392,7 +1402,7 @@ input[type='number'] {
 
 .catalog-item {
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 141px);
   grid-template-rows: 212px min-content auto min-content min-content;
   gap: 16px;
   padding: 20px;
@@ -1464,15 +1474,15 @@ input[type='number'] {
 }
 
 .hotel-stars-icons-2 {
-  width: 39px;
+  width: 41px;
 }
 
 .hotel-stars-icons-3 {
-  width: 61px;
+  width: 64px;
 }
 
 .hotel-stars-icons-4 {
-  width: 83px;
+  width: 88px;
 }
 
 .rating-text {
@@ -1497,12 +1507,15 @@ input[type='number'] {
   flex-wrap: wrap;
 }
 
+.pagination-item {
+  margin: 8px 8px 0 0;
+}
+
 .pagination-link {
   display: inline-block;
   width: 60px;
   height: 60px;
   padding: 11px 0px 13px 0px;
-  margin: 8px;
   border-radius: 4px;
   text-align: center;
   font-size: 20px;
