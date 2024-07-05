@@ -20,13 +20,13 @@
           </div>
           <ul class="navigation-list navigation-menu">
             <li class="navigation-menu-item">
-              <a href="index.html" class="navigation-link navigation-link-current">Главная</a>
+              <a href="index.html" class="navigation-link">Главная</a>
             </li>
             <li class="navigation-menu-item">
               <a href="#" class="navigation-link">О Седоне</a>
             </li>
             <li class="navigation-menu-item">
-              <a href="catalog.html" class="navigation-link">Гостиницы</a>
+              <a href="catalog.html" class="navigation-link navigation-link-current">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
@@ -144,12 +144,14 @@
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="range-wrapper-inputs">
                     <div class="range-input-holder">
-                      <input class="range-input range-input-min" type="number" value="0" name="min-price">
-                      <label class="range-input-label">от</label>
+                      <input class="range-input range-input-min" type="number" value="0" name="min-price"
+                        id="min-price-input">
+                      <label class="range-input-label" for="min-price-input">от</label>
                     </div>
                     <div class="range-input-holder">
-                      <input class="range-input range-input-max" type="number" value="9000" name="max-price">
-                      <label class="range-input-label">до</label>
+                      <input class="range-input range-input-max" type="number" value="9000" name="max-price"
+                        id="max-price-input">
+                      <label class="range-input-label" for="max-price-input">до</label>
                     </div>
                   </div>
                   <div class="range">
